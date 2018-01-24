@@ -43,16 +43,16 @@ namespace LabSheet1
 
         private void CreateDummyData()
         {
-            RockBand rb1 = new RockBand("Rock1", "1950",
+            RockBand rb1 = new RockBand("AC/DC", "1973",
                                         new List<string> { "Member1" },
                                         new List<Album> { new Album("Album1", new DateTime(rn.Next(1850, 2000), rn.Next(1, 12), rn.Next(1, 20)), rn.Next(300, 600)) });
 
-            PopBand pb1 = new PopBand("Pop1", "1850",
+            PopBand pb1 = new PopBand("Maroon 5", "2001",
                                         new List<string> { "Member1", "Member2" },
                                         new List<Album> { new Album("Album1", new DateTime(rn.Next(1850, 2000), rn.Next(1, 12), rn.Next(1, 20)), rn.Next(300, 600)),
                                         new Album("Album2", new DateTime(rn.Next(1850, 2000), rn.Next(1, 12), rn.Next(1, 20)), rn.Next(300, 600))});
 
-            IndieBand ib1 = new IndieBand("Indie1", "1980",
+            IndieBand ib1 = new IndieBand("Arcade Fire", "2001",
                                         new List<string> { "Member1", "Member2", "Member3" },
                                         new List<Album> { new Album("Album1", new DateTime(rn.Next(1850, 2000), rn.Next(1, 12), rn.Next(1, 20)), rn.Next(300, 600)),
                                         new Album("Album2", new DateTime(rn.Next(1850, 2000), rn.Next(1, 12), rn.Next(1, 20)), rn.Next(300, 600)),
@@ -73,7 +73,7 @@ namespace LabSheet1
         {
 
             
-                FileStream fs = new FileStream("Text.txt", FileMode.Append);
+                FileStream fs = new FileStream("Band.txt", FileMode.Append);
 
 
                 StreamWriter sw = new StreamWriter(fs);
@@ -107,7 +107,7 @@ namespace LabSheet1
 
 
                 lbl_FormedData.Content = temp.YearFormed;
-                lbl_MembersData.Content = String.Join(",",temp.Members);
+                lbl_MembersData.Content = string.Join(",",temp.Members);
 
                 lbox_Albums.ItemsSource = temp.Albums;
             }

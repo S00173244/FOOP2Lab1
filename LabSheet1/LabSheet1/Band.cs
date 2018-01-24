@@ -80,7 +80,7 @@ namespace LabSheet1
 
         public string DetailsForFileWrite()
         {
-            return string.Format("{0},{1},{2}", BandName, YearFormed, String.Join(",",Members));
+            return string.Format("{0},{1},{2}", BandName, YearFormed, string.Join(",",Members));
         }
     }
 }
