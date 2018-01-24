@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabSheet1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid>
+        <Label x:Name="lbl_Bands" Content="Bands" HorizontalAlignment="Left" Margin="44,24,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_BandInformation" Content="Band Information" HorizontalAlignment="Left" Margin="288,24,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_Formed" Content="Formed:" HorizontalAlignment="Left" Margin="288,66,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_Members" Content="Members:" HorizontalAlignment="Left" Margin="288,92,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_Albums" Content="Albums" HorizontalAlignment="Left" Margin="288,130,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_Genre" Content="Genre" HorizontalAlignment="Left" Margin="44,55,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_FormedData" Content="" HorizontalAlignment="Left" Margin="356,66,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_MembersData" Content="" HorizontalAlignment="Left" Margin="356,92,0,0" VerticalAlignment="Top"/>
+
+
+        <ComboBox x:Name="cbox_Genre" HorizontalAlignment="Left" Margin="87,59,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbox_Genre_SelectionChanged"/>
+        <ListBox x:Name="lbox_Bands" HorizontalAlignment="Left" Height="156" Margin="44,105,0,0" VerticalAlignment="Top" Width="163" SelectionChanged="lbox_Bands_Selected"/>
+        <ListBox x:Name="lbox_Albums" HorizontalAlignment="Left" Height="100" Margin="282,161,0,0" VerticalAlignment="Top" Width="198" SelectionChanged="lbox_Albums_Selected"/>
+        <Button x:Name="btn_Save" Content="Save" HorizontalAlignment="Left" Margin="378,276,0,0" VerticalAlignment="Top" Width="75" Click="btn_Save_Click"/>
         
     </Grid>
 </Window>
