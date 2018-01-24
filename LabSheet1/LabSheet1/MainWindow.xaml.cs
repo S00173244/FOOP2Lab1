@@ -71,30 +71,30 @@ namespace LabSheet1
 
         private void btn_Save_Click(object sender, RoutedEventArgs e)
         {
-            FileStream fs = new FileStream("Text.txt",FileMode.OpenOrCreate);
 
-            StreamReader sr = new StreamReader(fs);
-            StreamWriter sw = new StreamWriter(fs);
+            
+                FileStream fs = new FileStream("Text.txt", FileMode.Append);
 
-            Band band = (Band)lbox_Bands.SelectedItem;
 
-            string s;
-            int lineCount = 0;
-            while((s = sr.ReadLine())!= null){
-                lineCount++;
-            }
-            //sw.NewLine = lineCount+1;
-            sw.WriteLine(band.DetailsForFileWrite());
-            foreach (Album item in band.Albums)
-            {
-                sw.WriteLine(item.DetailsForFileWrite());
-                
-            }
+                StreamWriter sw = new StreamWriter(fs);
 
-            sw.Dispose();
-            sw.Close();
-            fs.Dispose();
-            fs.Close();
+                Band band = (Band)lbox_Bands.SelectedItem;
+
+
+                sw.WriteLine(band.DetailsForFileWrite());
+                foreach (Album item in band.Albums)
+                {
+                    sw.WriteLine(item.DetailsForFileWrite());
+
+                }
+           
+                sw.Dispose();
+                sw.Close();
+                fs.Dispose();
+                fs.Close();
+            
+
+          
 
 
         }
